@@ -3,7 +3,7 @@
 <?php
 include("mysqli_connect.inc.php");
 
-$id = $_POST['id'];
+$id = $_POST['fucku'];
 
 
 if($id != null)
