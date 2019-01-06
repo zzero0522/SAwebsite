@@ -11,7 +11,7 @@ if($id != null)
 		if(mysqli_query($db,$sql))
 		{
 			echo '連署成功，系統將自動跳轉回前頁!';
-			header('Refresh:1.5;url=vote.php');
+			header('Refresh:1.5;url=templated_vote.php');
 			exit;
 			
 		}

@@ -12,7 +12,7 @@ if($topic != null && $content != null)
 		if(mysqli_query($db,$sql))
 		{
 			echo '新增成功，系統將自動跳轉回前頁!';
-			header('Refresh:1.5;url=vote.php');
+			header('Refresh:1.5;url=templated_vote.php');
 			exit;
 		}
 		else
@@ -24,7 +24,7 @@ if($topic != null && $content != null)
 else
 {
         echo '請完成內容填寫，系統將自動跳轉回前頁!';
-		header('Refresh:1.5;url=new.php');
+		header('Refresh:1.5;url=templated_new.php');
 		exit;
 }
 ?>

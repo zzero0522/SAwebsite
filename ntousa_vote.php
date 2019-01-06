@@ -22,9 +22,8 @@ if($stmt = $db->query($query))
 		echo "<button type = 'submit' id='vote_btn'>連署</button></form>";
 	}	
 }
-
 ?>
-
+<input type = "button" value = "取消" onclick = "location.href='templated_vote.php'"/>
 </head>
 <body>
 </body>
