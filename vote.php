@@ -1,18 +1,18 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+include "mysqli_connect.inc.php";
+?>
 <html><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
+	<input type = "button" value = "新增提案" onclick = "location.href='new.php'"/>
 </head>
 <body>
 <div class="container">
-	<form action='ntousa_vote.php' method ='get'>
-      <label for="votebase"><h1>現有提案</h1></label>	
+	<form action='ntousa_vote.php' method ='get'><!--好像不是必要-->
+      <h1>現有提案</h1>
 			<?php
-				include "mysqli_connect.inc.php";
-				$query = "SELECT * FROM proposal ORDER BY 'id'";
-				//$result = mysql_query($query,$db);//$db is in m_c.inc.php
 				
-				//$data_nums = mysql_num_rows($result);//總數
-				//$per = 5;//每頁數目
+				$query = "SELECT * FROM proposal ORDER BY 'id'";
 				$i = 0;
 				if($stmt = $db->query($query))
 				{
@@ -24,7 +24,6 @@
 						echo "<td colspan ='3'><a href='ntousa_vote.php?topic_ID=".$arr[$i]."' class='btn btn-default'>詳情</a></td></tr>";
 						$i++;
 					}
-					//print_r($arr);
 					echo "</table>";
 				}
 			?>	

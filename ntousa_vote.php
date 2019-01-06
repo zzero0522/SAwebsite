@@ -1,9 +1,11 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+include "mysqli_connect.inc.php";
+?>
 <html><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
 
 <?php
-include "mysqli_connect.inc.php";
 $id = $_GET['topic_ID'];
 $query = "SELECT * FROM proposal WHERE id ='$id'";
 if($stmt = $db->query($query))
