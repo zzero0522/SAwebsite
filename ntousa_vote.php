@@ -18,12 +18,12 @@ if($stmt = $db->query($query))
 		echo "<label>現有連署人數：".$result->count."</label>";
 		echo "<br>";
 		echo "<form action='vote_action.php' method ='post'>";
-		echo "<input type = 'hidden' name='fucku' value = '$id'>";
+		echo "<input type = 'hidden' name='id' value = '$id'>";
 		echo "<button type = 'submit' id='vote_btn'>連署</button></form>";
 	}	
 }
 ?>
-<input type = "button" value = "取消" onclick = "location.href='templated_vote.php'"/>
+<input type = "button" value = "取消" onclick = "location.href='vote.php'"/>
 </head>
 <body>
 </body>

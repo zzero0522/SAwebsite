@@ -22,7 +22,7 @@ if($id != null && $pw != null && $result[0] == $id && $result[1] == $pw)
         //將帳號寫入session，方便驗證使用者身份
         $_SESSION['username'] = $id;
         echo '登入成功!';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=templated_vote.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=vote.php>';
 }
 else
 {

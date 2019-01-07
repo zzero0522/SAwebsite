@@ -18,22 +18,22 @@ if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
         if(mysqli_query($db,$sql))
         {
                 echo '新增成功!';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=login.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=1.5;url=login.php>';
         }
         else
         {
                 echo '新增失敗!';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=.php>';
+                echo '<meta http-equiv=REFRESH CONTENT=1.5;url=.php>';
         }
 }
 else if($pw != $pw2)
 {
 	echo "請確認密碼輸入相同!";
-	echo '<meta http-equiv=REFRESH CONTENT=2;url=register.php>';
+	echo '<meta http-equiv=REFRESH CONTENT=1.5;url=register.php>';
 }
 else
 {
         echo '請確認填寫所有表格!';
-        echo '<meta http-equiv=REFRESH CONTENT=2;url=register.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=1.5;url=register.php>';
 }
 ?>

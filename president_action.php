@@ -4,20 +4,20 @@ include "mysqli_connect.inc.php";
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-$id = $_POST['id'];
+$id = $_POST['president_vote'];
 if($id != null)
 {
-		$sql = "update proposal set count = count+1 where id = '$id'";
+		$sql = "update president set count = count+1 where id = '$id'";
 		if(mysqli_query($db,$sql))
 		{
-			echo '連署成功，系統將自動跳轉回前頁!';
-			header('Refresh:1.5;url=vote.php');
+			echo '投票成功，系統將自動跳轉回前頁!';
+			header('Refresh:1.5;url=president.php');
 			exit;
 			
 		}
 		else
 		{
-			echo '連署失敗1!';
+			echo '投票失敗1!';
 		}				
         
 }
