@@ -2,6 +2,7 @@
 <?php 
 session_start(); 
 include "mysqli_connect.inc.php";
+$username = @$_SESSION['username'];
 ?>
 <html>
 	<head>
@@ -32,6 +33,16 @@ include "mysqli_connect.inc.php";
 			<div class="container">
 				<header>
 					<h2>第87屆學生會正副會長選舉</h2>
+					<?php
+						if($username == null)
+						{
+							echo"<a href='login.php' class='button'>登入</a>";
+						}
+						else
+						{
+							echo"<a href='logout.php' class='button'>登出</a>";
+						}
+					?>
 				</header>
 				
 					<?php
@@ -50,7 +61,7 @@ include "mysqli_connect.inc.php";
 								echo "	<tr><td><input type = 'radio' name='president_vote' value='".$result->id."'>支持 ".$result->id." 號候選人</td></tr>";	
 								echo "</table>";
 							}
-							echo "<button type = 'submit'>確認投票</button>";
+							echo "<button type = 'submit' class='button'>確認投票</button>";
 							echo "</form>";
 						}
 					?>			

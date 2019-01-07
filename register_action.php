@@ -17,23 +17,23 @@ if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
         $sql = "insert into member (id, pw) values ('$id', '$pw')";
         if(mysqli_query($db,$sql))
         {
-                echo '新增成功!';
+                echo '<h1>註冊成功!</h1>';
                 echo '<meta http-equiv=REFRESH CONTENT=1.5;url=login.php>';
         }
         else
         {
-                echo '新增失敗!';
+                echo '<h1>新增失敗!</h1>';
                 echo '<meta http-equiv=REFRESH CONTENT=1.5;url=.php>';
         }
 }
 else if($pw != $pw2)
 {
-	echo "請確認密碼輸入相同!";
+	echo "<h1>請確認密碼輸入相同!</h1>";
 	echo '<meta http-equiv=REFRESH CONTENT=1.5;url=register.php>';
 }
 else
 {
-        echo '請確認填寫所有表格!';
+        echo '<h1>請確認填寫所有表格!</h1>';
         echo '<meta http-equiv=REFRESH CONTENT=1.5;url=register.php>';
 }
 ?>

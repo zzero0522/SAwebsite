@@ -15,7 +15,7 @@
 					<li><a href="/news.html">最新消息</a></li>
 					<li><a href="/file.html">文件資料</a></li>
 					<li><a href="/contact.html">聯絡我們</a></li>
-					<li><a href="/vote.html">投票系統</a></li>
+					<li><a href="/choose.php">投票系統</a></li>
 				</ul>
 			</nav>
 

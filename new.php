@@ -2,6 +2,7 @@
 <?php 
 session_start(); 
 include "mysqli_connect.inc.php";
+$username = $_SESSION['username'];
 ?>
 <html>
 	<head>

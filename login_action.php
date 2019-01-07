@@ -21,12 +21,12 @@ if($id != null && $pw != null && $result[0] == $id && $result[1] == $pw)
 {
         //將帳號寫入session，方便驗證使用者身份
         $_SESSION['username'] = $id;
-        echo '登入成功!';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=vote.php>';
+        echo '<h1>登入成功!</h1>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=choose.php>';
 }
 else
 {
-        echo '登入失敗!';
+        echo '<h1>登入失敗!</h1>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=login.php>';
 }
 ?>

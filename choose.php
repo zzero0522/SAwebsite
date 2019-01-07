@@ -44,6 +44,5 @@ include "mysqli_connect.inc.php";
 				National Taiwan Ocean University Student Association
 			</div>
 		</div>
-
 	</body>
 </html>

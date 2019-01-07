@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
 <?php 
 session_start(); 
 include "mysqli_connect.inc.php";
+$username = $_SESSION['username'];
 ?>
 <html>
 	<head>
@@ -34,6 +34,16 @@ include "mysqli_connect.inc.php";
 				<header>
 					<h2>現有提案</h2>
 					<a href="new.php" class="button">我要新增提案</a>
+					<?php
+						if($username == null)
+						{
+							echo"<a href='login.php' class='button'>登入</a>";
+						}
+						else
+						{
+							echo"<a href='logout.php' class='button'>登出</a>";
+						}
+					?>
 				</header>
 				<div class="row">
 					<?php
@@ -65,6 +75,5 @@ include "mysqli_connect.inc.php";
 				National Taiwan Ocean University Student Association
 			</div>
 		</div>
-
 	</body>
 </html>
