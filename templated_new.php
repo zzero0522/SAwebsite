@@ -56,13 +56,13 @@ include "mysqli_connect.inc.php";
 					<h2>新增提案</h2>
 					<a href="templated_vote.php" class="button">放棄提案</a>
 				</header>
-				<div class="row">
+				
 					<form action='new_vote_action.php' method ='post'>
-						<h3>提案標題</h3><input type = "text" style="width:500px" placeholder="以20字為限" name = "topic"/><br>
-						<h3>提案主文</h3><textarea style="width:500px;height:200px" placeholder="請盡量詳述提案內容" name = "content"></textarea><br>
-						<button type = 'submit' class="button" value="新增提案">新增提案</button>
+						<h3>提案標題</h3><input type = "text" style="width:350px" placeholder="以20字為限" name = "topic"/><br>
+						<h3>提案主文</h3><textarea style="width:350px;height:200px" placeholder="請盡量詳述提案內容" name = "content"></textarea><br>
+						<button type = 'submit' class="button">新增提案</button>
 					</form>
-				</div>			
+						
 			</div>
 		</div>
 	<!-- Copyright -->
